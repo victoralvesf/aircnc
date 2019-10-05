@@ -2,6 +2,23 @@ const Spot = require('../models/Spot');
 const User = require('../models/User');
 
 module.exports = {
+    async index(req, res) {
+        const { tech } = req.query;
+
+        try {
+            const spots = await Spot.find({ techs: tech });
+
+            return res.status(200).json(spots);
+        } catch(err) {
+            console.log(err)
+            return res.status(500).json({
+                status: false,
+                message: "Nao foi possivel realizar essa operacao, tente novamente"
+            })
+        }
+
+    },
+
     async store(req, res) {
         const { filename } = req.file;
         const { company, techs, price } = req.body;
