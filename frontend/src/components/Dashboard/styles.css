@@ -1,0 +1,56 @@
+ul.spotList {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 30px;
+    max-height: 390px;
+    overflow: auto;
+    padding-right: 6px;
+}
+
+ul.spotList::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+ul.spotList::-webkit-scrollbar-button {
+    width: 5px;
+    height: 5px;
+}
+
+ul.spotList::-webkit-scrollbar-thumb {
+    background: #666;
+    border: none;
+    border-radius: 10px;
+}
+
+ul.spotList::-webkit-scrollbar-track {
+    background: #eee;
+    border: none;
+    border-radius: 10px;
+}
+
+ul.spotList li {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.spotList li header {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    border-radius: 4px;
+}
+
+ul.spotList li strong {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #444;
+}
+
+ul.spotList li span {
+    font-size: 15px;
+    color: #999;
+}

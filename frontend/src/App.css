@@ -1,22 +1,127 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  outline: 0;
 }
 
-.App-logo {
-  height: 40vmin;
+@font-face {
+  font-family: 'Airbnb';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/AirbnbCerealBook.ttf');
+  src: local('Airbnb')
+    url('./fonts/AirbnbCerealBook.ttf') format('truetype');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: 'Airbnb';
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/AirbnbCerealBold.ttf');
+  src: local('Airbnb')
+    url('./fonts/AirbnbCerealBold.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #000 url('./assets/background.jpg') no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+body, input, button {
+  font-family: 'Airbnb', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+:root {
+  --primary-color: #FF5A5F;
+  --primary-color-hover: #E14F50;
+  --font-color: #484848;
+}
+
+.logo {
+  -webkit-user-drag: none;
+}
+
+.container {
+  margin: 80px auto 0;
+  max-width: 450px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: -50px;
 }
 
-.App-link {
-  color: #09d3ac;
+.content {
+  width: 100%;
+  background: #fff;
+  margin-top: 50px;
+  border-radius: 4px;
+  padding: 30px;
+}
+
+.content > p {
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.content > * {
+  margin-bottom: 15px;
+}
+
+.content > form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.content > form > label {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.content form label span {
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+}
+
+.content > form > input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.content > form > button.loginButton, .loginButton {
+  width: auto;
+  padding: 10px 20px;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.content > form > button.loginButton:hover, .loginButton:hover {
+  background: var(--primary-color-hover);
+}
+
+.addSpot {
+  float: right;
 }
